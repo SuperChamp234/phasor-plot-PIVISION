@@ -194,7 +194,7 @@
         Border : '#000000',
         BorderThickness : 1,
         iconURL: 'icons/sym-phasor.png',
-        visObjectType: phasorplt,
+        visObjectType: phasorplot,
         getDefaultConfig: function () {
             return {
                 DataShape: 'Phasor',
