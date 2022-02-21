@@ -214,6 +214,6 @@ window.PIVisualization = window.PIVisualization || {};
             }
         }
     };
-    PV.symbolCatalog.register('Phasor Plot', definition);
+    PV.symbolCatalog.register(definition);
 
 })(window.PIVisualization);
