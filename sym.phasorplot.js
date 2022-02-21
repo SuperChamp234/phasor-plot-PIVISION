@@ -1,10 +1,10 @@
 (function (PV) {
     'use strict';
 
-    function phasorplt() { }
-    PV.deriveVisualizationFromBase(symbolVis);
+    function phasorplot() { }
+    PV.deriveVisualizationFromBase(phasorplot);
 
-    symbolVis.prototype.init = function (scope) {
+    phasorplot.prototype.init = function (scope) {
         this.onDataUpdate = dataUpdate;
         this.onResize = draw;
         this.onDataUpdate(scope);
