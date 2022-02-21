@@ -1,6 +1,3 @@
-window.PIVisualization = window.PIVisualization || {};
-
-
 (function (PV) {
     'use strict';
 
@@ -192,7 +189,7 @@ window.PIVisualization = window.PIVisualization || {};
     var definition = {
         typeName: 'phasorplot',
         displayName: 'Phasor Plot',
-        datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Multiple,
+        datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,
         Fill : '#ffffff',
         Border : '#000000',
         BorderThickness : 1,
@@ -215,5 +212,4 @@ window.PIVisualization = window.PIVisualization || {};
         }
     };
     PV.symbolCatalog.register(definition);
-
 })(window.PIVisualization);
