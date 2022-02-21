@@ -1,3 +1,6 @@
+window.PIVisualization = window.PIVisualization || {};
+
+
 (function (PV) {
     'use strict';
 
@@ -212,8 +215,6 @@
         }
     };
     PV.symbolCatalog.add(definition);
-
-    
     PV.symbolCatalog.addCategorie('Phasor Plot', definition);
 
 })(window.PIVisualization);
