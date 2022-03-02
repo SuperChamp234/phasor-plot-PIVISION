@@ -14,6 +14,9 @@
                 }
                 scope.Frame_Height = data.Frame_Height;
                 scope.Frame_Width = data.Frame_Width;
+                //modify innerhtml of the div with id test
+                // document.getElementById("test").innerHTML = "whatever";
+
             }
         }
     };
