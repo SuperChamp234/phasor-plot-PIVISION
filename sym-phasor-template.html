@@ -1,3 +1,70 @@
-<svg width="95%" height="95%"
- viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
-</svg>
+<div ng-class="{'blink': MultiStateBlink}">
+    <div ng-if="config.ShowLabel"
+         style="position: absolute; left: 0; font-size: 15px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+         ng-style="{ top: symbolLabel.y - 12, width: position.width, color: config.ScaleColor }">{{symbolLabel.text}}</div>
+
+    <svg style="width: 100%; margin: 0 auto" 
+         xmlns="http://www.w3.org/2000/svg" x="0" y="0" ng-attr-width="{{position.width}}" ng-attr-height="{{position.height}}">
+        <defs>
+            <pattern ng-attr-id="{{'diagonalHatch-'+symbol.Name}}" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="scale(3) rotate(-45 2 2)">
+                <path d="M -1,2 l 6,0" ng-attr-stroke="{{MultiStateColor || config.IndicatorColor}}" stroke-width="1"></path>
+            </pattern>
+        </defs>
+
+        <path stroke-width="0"
+              ng-attr-fill="{{config.FaceColor}}"
+              ng-attr-d="{{gaugeFace}}"></path>
+
+        <path ng-if="IsGood === false && config.IndicatorType !== 'arc'"
+              stroke-width="0"
+              ng-attr-fill="{{'url(#diagonalHatch-'+symbol.Name+')'}}"
+              ng-attr-d="{{gaugeFace}}"></path>
+
+        <path ng-if="config.IndicatorType==='arc'"
+              stroke-width="0"
+              ng-attr-fill="{{IsGood !== false ? MultiStateColor || config.IndicatorColor : 'url(#diagonalHatch-'+symbol.Name+')'}}"
+              ng-attr-d="{{arc}}"></path>
+
+        <path ng-attr-stroke="{{config.BorderColor}}"
+              ng-attr-stroke-width="{{config.BorderWidth}}"
+              fill="rgba(0, 0, 0, 0)"
+              ng-attr-d="{{gaugeFace}}"></path>
+
+        <path ng-attr-stroke="{{config.ScaleColor}}"
+              stroke-width="1"
+              ng-attr-d="{{tickMarks}}"></path>
+
+        <g ng-if="config.ShowValue">
+            <text ng-attr-font-size="{{value.fontSize}}"
+                  text-anchor="middle"
+                  ng-attr-fill="{{config.ValueColor}}"
+                  ng-attr-x="{{value.x}}"
+                  ng-attr-y="{{value.y}}"
+                  ng-attr-dy="{{value.dy}}">{{value.text}}</text>
+
+            <text ng-if="config.ShowUOM && valueInside"
+                  font-size="12px"
+                  text-anchor="middle"
+                  ng-attr-fill="{{config.ValueColor}}"
+                  ng-attr-x="{{uom.x}}"
+                  ng-attr-y="{{uom.y}}"
+                  dy="14">{{uom.text}}</text>
+        </g>
+
+        <path ng-if="config.IndicatorType !== 'arc' && IsGood !== false"
+              ng-attr-transform="{{pointerTransform}}"
+              ng-attr-stroke="{{MultiStateColor || config.IndicatorColor}}"
+              stroke-width="1"
+              ng-attr-fill="{{MultiStateColor || config.IndicatorColor}}"
+              ng-attr-d="{{pointer}}"></path>
+
+        <text ng-repeat="label in scaleLabels track by $index"
+              font-size="12px"
+              ng-attr-text-anchor="{{label.align}}"
+              ng-attr-fill="{{config.ScaleColor}}"
+              ng-attr-x="{{label.x}}"
+              ng-attr-y="{{label.y}}"
+              ng-attr-dy="{{label.dy}}">{{label.text}}</text>
+
+    </svg>
+</div>
