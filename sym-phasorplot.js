@@ -14,8 +14,7 @@
                 }
                 scope.Frame_Height = data.Frame_Height;
                 scope.Frame_Width = data.Frame_Width;
-                //modify innerhtml of the div with id test
-                // document.getElementById("test").innerHTML = "whatever";
+                document.getElementById("test").innerHTML = "whatever";
 
             }
         }
@@ -31,7 +30,8 @@
                 Frame_Height: 150,
                 Frame_Width: 150
             };
-        }
+        },
+        configTitle: 'Format Symbol',
     };
 
     CS.symbolCatalog.register(definition);
