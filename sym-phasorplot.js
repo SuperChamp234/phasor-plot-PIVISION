@@ -7,15 +7,8 @@
 
         function dataUpdate(data) {
             if(data) {
-                scope.value = data.Value;
-                scope.time = data.Time;
-                if(data.Label) {
-                    scope.label = data.Label;
-                }
-                scope.Frame_Height = data.Frame_Height;
-                scope.Frame_Width = data.Frame_Width;
-                document.getElementById("test").innerHTML = "whatever";
-
+                scope.value = 150;
+                scope.value2 = 150;
             }
         }
     };
