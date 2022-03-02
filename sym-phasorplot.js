@@ -1,8 +1,8 @@
 (function (CS) {
     function phasorplot() { }
-    CS.deriveVisualizationFromBase(symbolVis);
+    CS.deriveVisualizationFromBase(phasorplot);
 
-	symbolVis.prototype.init = function (scope) {
+	phasorplot.prototype.init = function (scope) {
         this.onDataUpdate = dataUpdate;
 
         function dataUpdate(data) {
