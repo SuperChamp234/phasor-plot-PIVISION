@@ -1,8 +1,19 @@
 (function (CS) {
     function phasorplot() { }
-    CS.deriveVisualizationFromBase(phasorplot);
+    CS.deriveVisualizationFromBase(symbolVis);
 
-    phasorplot.prototype.init = function () {
+	symbolVis.prototype.init = function (scope) {
+        this.onDataUpdate = dataUpdate;
+
+        function dataUpdate(data) {
+            if(data) {
+                scope.value = data.Value;
+                scope.time = data.Time;
+                if(data.Label) {
+                    scope.label = data.Label;
+                }
+            }
+        }
     };
 
     var definition = {
@@ -11,7 +22,7 @@
         visObjectType: phasorplot,
         getDefaultConfig: function() {
             return {
-                DataShape: 'Value',
+                DataShape: 'Gauge',
                 Frame_Height: 150,
                 Frame_Width: 150
             };
