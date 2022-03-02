@@ -12,6 +12,8 @@
                 if(data.Label) {
                     scope.label = data.Label;
                 }
+                scope.Frame_Height = data.Frame_Height;
+                scope.Frame_Width = data.Frame_Width;
             }
         }
     };
