@@ -1,56 +1,56 @@
-(function (PV) {
-    'use strict';
+// (function (PV) {
+//     'use strict';
 
-    function phasorplot() { }
-    PV.deriveVisualizationFromBase(phasorplot);
+//     function phasorplot() { }
+//     PV.deriveVisualizationFromBase(phasorplot);
 
-    phasorplot.prototype.init = function (scope) {
-        this.onDataUpdate = dataUpdate;
-        this.onResize = draw;
-        this.onDataUpdate(scope);
-    };
+//     phasorplot.prototype.init = function (scope) {
+//         this.onDataUpdate = dataUpdate;
+//         this.onResize = draw;
+//         this.onDataUpdate(scope);
+//     };
 
-    var phasorData = {
-        scalePositions: [],
-        scaleLabels: [],
-        time: "",
-        startIndicatorPosition: undefined,
-        indicatorPosition: undefined,
-        currentValue: '...',
-        center: { x: 100, y: 100 },
-        radius: 50,
-        faceAngle: 360,
-        showScaleLabels: 'all',
-        ShowValue: true,
-    }
+//     var phasorData = {
+//         scalePositions: [],
+//         scaleLabels: [],
+//         time: "",
+//         startIndicatorPosition: undefined,
+//         indicatorPosition: undefined,
+//         currentValue: '...',
+//         center: { x: 100, y: 100 },
+//         radius: 50,
+//         faceAngle: 360,
+//         showScaleLabels: 'all',
+//         ShowValue: true,
+//     }
 
-    var definition = {
-        typeName: 'phasorplot',
-        displayName: 'Phasor Plot',
-        datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,
-        Fill : '#ffffff',
-        Border : '#000000',
-        BorderThickness : 1,
-        iconURL: 'icons/sym-phasor.png',
-        visObjectType: phasorplot,
-        getDefaultConfig: function () {
-            return {
-                DataShape: 'Phasor',
-                Height: 300,
-                Width: 300,
-                ShowLabels: true,
-                ShowValues: true,
-                ShowUOM: true,
-                FaceAngle: 300,
-                IndicatorType: 'pointer',
-                IndicatorWeight: 2,
-                BorderWidth: 3,
-                valueInside: false,
-            }
-        }
-    };
-    PV.symbolCatalog.register(definition);
-})(window.PIVisualization);
+//     var definition = {
+//         typeName: 'phasorplot',
+//         displayName: 'Phasor Plot',
+//         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,
+//         Fill : '#ffffff',
+//         Border : '#000000',
+//         BorderThickness : 1,
+//         iconURL: 'icons/sym-phasor.png',
+//         visObjectType: phasorplot,
+//         getDefaultConfig: function () {
+//             return {
+//                 DataShape: 'Phasor',
+//                 Height: 300,
+//                 Width: 300,
+//                 ShowLabels: true,
+//                 ShowValues: true,
+//                 ShowUOM: true,
+//                 FaceAngle: 300,
+//                 IndicatorType: 'pointer',
+//                 IndicatorWeight: 2,
+//                 BorderWidth: 3,
+//                 valueInside: false,
+//             }
+//         }
+//     };
+//     PV.symbolCatalog.register(definition);
+// })(window.PIVisualization);
 var sampleData = {
     title: "Sample Data",
     lineFrequency: 60,
@@ -64,3 +64,13 @@ var sampleData = {
         },
     ]
 };
+// generate a waveform set from the source data; this can contain multiple 
+// series of waveform data that contain multiple cycles of wavefom samples.
+var wfSet = ACWF.WaveformSet.create(sampleData);
+// analyze a cycle of data starting at the specified sample 
+wfSet.analyze(0);
+// initialize the phasor plot to display itself inside the element
+// with id="phasor"
+var phasor = new ACWF.PhasorDiagram("phasor");
+// plot the waveform data
+phasor.plotWaveformSet(wfSet, 0);
