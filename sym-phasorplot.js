@@ -1,6 +1,3 @@
-import "acwf-canvas.js"
-import "acwf-core.js"
-
 (function (PV) {
     'use strict';
 
@@ -26,16 +23,16 @@ import "acwf-core.js"
                 },
             ]
         };
-        // generate a waveform set from the source data; this can contain multiple 
-        // series of waveform data that contain multiple cycles of wavefom samples.
-        var wfSet = ACWF.WaveformSet.create(sampleData);
-        // analyze a cycle of data starting at the specified sample 
-        wfSet.analyze(0);
-        // initialize the phasor plot to display itself inside the element
-        // with id="phasor"
-        var phasor = new ACWF.PhasorDiagram("phasor");
-        // plot the waveform data
-        phasor.plotWaveformSet(wfSet, 0);
+        // // generate a waveform set from the source data; this can contain multiple 
+        // // series of waveform data that contain multiple cycles of wavefom samples.
+        // var wfSet = ACWF.WaveformSet.create(sampleData);
+        // // analyze a cycle of data starting at the specified sample 
+        // wfSet.analyze(0);
+        // // initialize the phasor plot to display itself inside the element
+        // // with id="phasor"
+        // var phasor = new ACWF.PhasorDiagram("phasor");
+        // // plot the waveform data
+        // phasor.plotWaveformSet(wfSet, 0);
     }
 
     var definition = {
