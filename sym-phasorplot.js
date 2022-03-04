@@ -9,7 +9,7 @@
             if(data) {
                 //test data
                 let vectorMag=50;
-                let vectorAngle=60;
+                let vectorAng=60;
                 //
                 scope.h = 150;
                 scope.w = 150;
