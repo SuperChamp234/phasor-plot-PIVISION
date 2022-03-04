@@ -16,7 +16,9 @@
                 scope.cx= 150/2;
                 scope.cy = 150/2;
                 scope.circleR = vector1_mag;
-                [scope.l1ex2, scope.l1ey2] = drawLine(scope, test_data.vector1_mag, vector1_angle);
+                let linecoordinates = drawLine(scope, test_data.vector1_mag, vector1_angle);
+                scope.l1ex2 = linecoordinates[0];
+                scope.l1ey2 = linecoordinates[1];
             }
         }
             function drawLine(scope, vectorMag, vectorAng){
