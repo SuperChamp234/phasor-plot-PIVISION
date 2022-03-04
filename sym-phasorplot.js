@@ -11,6 +11,7 @@
                 let vectorMag=50;
                 let vectorAng=60;
                 //
+                vectorAng = 3.14*(vectorAng/180);
                 scope.h = 150;
                 scope.w = 150;
                 scope.cx= 150/2;
