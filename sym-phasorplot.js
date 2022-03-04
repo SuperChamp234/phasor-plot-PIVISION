@@ -6,26 +6,26 @@
         this.onDataUpdate = dataUpdate;
 
         function dataUpdate(data) {
-            var test_data = {
-                vector1_mag: 50,
-                vector1_angle: 60,
-            }
             if(data) {
+                //test data
+                vectorMag=50;
+                vectorAngle=60;
+                //
                 scope.h = 150;
                 scope.w = 150;
                 scope.cx= 150/2;
                 scope.cy = 150/2;
-                scope.circleR = vector1_mag;
-                scope.l1ex2 = scope.cx + test_data.vector1_mag * Math.cos(test_data.vector1_angle);
-                scope.l1ey2 = scope.cy + test_data.vector1_mag * Math.sin(test_data.vector1_angle);
-                //console.log all values
-                console.log(scope.h);
-                console.log(scope.w);
-                console.log(scope.cx);
-                console.log(scope.cy);
-                console.log(scope.circleR);
-                console.log(scope.l1ex2);
-                console.log(scope.l1ey2);
+                scope.circleR = vectorMag;
+                scope.l1ex2 = scope.cx + vectorMag * Math.cos(vectorAng);
+                scope.l1ey2 = scope.cy + vectorMag * Math.sin(vectorAng);
+                // //console.log all values
+                // console.log(scope.h);
+                // console.log(scope.w);
+                // console.log(scope.cx);
+                // console.log(scope.cy);
+                // console.log(scope.circleR);
+                // console.log(scope.l1ex2);
+                // console.log(scope.l1ey2);
             }
         }
         function drawLine(scope, vectorMag, vectorAng){
