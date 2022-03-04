@@ -16,8 +16,8 @@
                 scope.cx= 150/2;
                 scope.cy = 150/2;
                 scope.circleR = vector1_mag;
-                scope.l1ex2 = scope.cx + vectorMag * Math.cos(vectorAng);
-                scope.l1ey2 = scope.cy + vectorMag * Math.sin(vectorAng);
+                scope.l1ex2 = scope.cx + test_data.vector1_mag * Math.cos(test_data.vector1_angle);
+                scope.l1ey2 = scope.cy + test_data.vector1_mag * Math.sin(test_data.vector1_angle);
                 //console.log all values
                 console.log(scope.h);
                 console.log(scope.w);
