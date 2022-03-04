@@ -18,8 +18,8 @@
                 scope.circleR = vectorMag;
                 l1ex2 = 150/2 + vectorMag * Math.cos(vectorAng);
                 l1ey2 = 150/2 + vectorMag * Math.sin(vectorAng);
-                console.log(l1ex2);
-                console.log(l1ey2);
+                // console.log(l1ex2);
+                // console.log(l1ey2);
             }
         }
         function drawLine(scope, vectorMag, vectorAng){
