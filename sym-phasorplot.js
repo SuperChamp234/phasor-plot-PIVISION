@@ -7,6 +7,7 @@
 
         function dataUpdate(data) {
             if(data) {
+                console.log(data)
                 //test data
                 let vectorMag=50;
                 let vectorAng=60;
@@ -35,7 +36,7 @@
         visObjectType: phasorplot,
         getDefaultConfig: function() {
             return {
-                DataShape: 'Gauge',
+                DataShape: "Value",
                 Frame_Height: 150,
                 Frame_Width: 150
             };
