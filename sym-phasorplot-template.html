@@ -1,5 +1,5 @@
-<!-- draw svg circle -->
-<svg width="{{value}}" heigth="{{value2}}">
-    <circle cx="75" cy="75" r="60" stroke="white" stroke-width="3" fill="none" />
-    <path d="M75 75 L130 34.6410161514" stroke="white" stroke-width="3" fill="none"></path>
-</svg>
+<svg ng-viewbox="0 0 {{h}} {{w}}">
+    <circle ng-cx="{{cx}}" ng-cy="{{cy}}" r="60" stroke="black" stroke-width="3" fill="none" />
+    <path ng-d="M{{cx}} {{cy}} L130 34.6410161514" stroke="black" stroke-width="3" fill="none"></path>
+  </svg>
+<div>{{cx}}</div>

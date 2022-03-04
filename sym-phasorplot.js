@@ -7,8 +7,10 @@
 
         function dataUpdate(data) {
             if(data) {
-                scope.value = 150;
-                scope.value2 = 150;
+                scope.h = 150;
+                scope.w = 150;
+                scope.cx= 150/2;
+                scope.cy = 150/2
             }
         }
     };
