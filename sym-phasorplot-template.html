@@ -1,5 +1,11 @@
 <svg height="{{h}}" width="{{w}}">
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+        refX="0" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" />
+        </marker>
+      </defs>
     <circle cx="{{cx}}" cy="{{cy}}" r="{{circleR}}" stroke="black" stroke-width="3" fill="none" />
-    <path d="M{{cx}} {{cy}} L{{l1ex2}} {{l1ey2}}" stroke="black" stroke-width="3" fill="none"></path>
+    <line x1="{{cx}}" y1="{{cy}}" x2="{{l1ex2}}" y2="{{l1ey2}}" stroke="black" stroke-width="3" marker-end="url(#arrowhead)"/>
   </svg>
 <div>{{l1ex2}}</div>
