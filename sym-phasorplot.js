@@ -22,7 +22,7 @@
             }
         }
         function drawLine(scope, vectorMag, vectorAng){
-            vectorAng = 3.14*(vectorAng/180);
+            vectorAng = -3.14*(vectorAng/180);
             var x2 = scope.cx + vectorMag * Math.cos(vectorAng);
             var y2 = scope.cy + vectorMag * Math.sin(vectorAng);
             return [x2,y2];
