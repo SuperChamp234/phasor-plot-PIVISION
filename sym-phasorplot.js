@@ -18,6 +18,14 @@
                 scope.circleR = vector1_mag;
                 scope.l1ex2 = scope.cx + vectorMag * Math.cos(vectorAng);
                 scope.l1ey2 = scope.cy + vectorMag * Math.sin(vectorAng);
+                //console.log all values
+                console.log(scope.h);
+                console.log(scope.w);
+                console.log(scope.cx);
+                console.log(scope.cy);
+                console.log(scope.circleR);
+                console.log(scope.l1ex2);
+                console.log(scope.l1ey2);
             }
         }
         function drawLine(scope, vectorMag, vectorAng){
