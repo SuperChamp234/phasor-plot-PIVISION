@@ -16,16 +16,10 @@
                 scope.cx= 150/2;
                 scope.cy = 150/2;
                 scope.circleR = vectorMag;
-                scope.l1ex2 = 150/2 + vectorMag * Math.cos(vectorAng);
-                scope.l1ey2 = 150/2 + vectorMag * Math.sin(vectorAng);
-                // //console.log all values
-                // console.log(scope.h);
-                // console.log(scope.w);
-                // console.log(scope.cx);
-                // console.log(scope.cy);
-                // console.log(scope.circleR);
-                // console.log(scope.l1ex2);
-                // console.log(scope.l1ey2);
+                l1ex2 = 150/2 + vectorMag * Math.cos(vectorAng);
+                l1ey2 = 150/2 + vectorMag * Math.sin(vectorAng);
+                console.log(l1ex2);
+                console.log(l1ey2);
             }
         }
         function drawLine(scope, vectorMag, vectorAng){
