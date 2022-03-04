@@ -8,8 +8,8 @@
         function dataUpdate(data) {
             if(data) {
                 //test data
-                vectorMag=50;
-                vectorAngle=60;
+                let vectorMag=50;
+                let vectorAngle=60;
                 //
                 scope.h = 150;
                 scope.w = 150;
