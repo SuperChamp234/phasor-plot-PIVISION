@@ -19,7 +19,7 @@
                 scope.circleR = vectorMag;
                 // console.log(l1ex2);
                 // console.log(l1ey2);
-                [scope.l1ex2, scope.l1ey2] = drawLine(scope, vectorMag, vectorAng)
+                [scope.l1ex2, scope.l1ey2] = drawLine(scope, vectorMag, parseInt(data.Value))
             }
         }
         function drawLine(scope, vectorMag, vectorAng){
