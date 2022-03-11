@@ -2,8 +2,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="{{h}}" width="{{w}}">
     <circle cx="{{cx}}" cy="{{cy}}" r="{{circleR}}" stroke="black" stroke-width="3" fill="none" />
     <!-- Vector A -->
-    <line ng-show="state.showIA == true" x1="{{cx}}" y1="{{cy}}" x2="{{lAex2}}" y2="{{lAey2}}" stroke="red" stroke-width="3" />
-    <text ng-show="{{showIA}}" x="{{lAex2}}" y="{{lAey2 + 10}}" class="small">IA</text>
+    <line ng-if="state.showIA" x1="{{cx}}" y1="{{cy}}" x2="{{lAex2}}" y2="{{lAey2}}" stroke="red" stroke-width="3" />
+    <text ng-if="state.showIA" x="{{lAex2}}" y="{{lAey2 + 10}}" class="small">IA</text>
     <!-- Vector B -->
     <line ng-show="{{showIB}}" x1="{{cx}}" y1="{{cy}}" x2="{{lBex2}}" y2="{{lBey2}}" stroke="blue" stroke-width="3" />
     <text ng-show="{{showIB}}" x="{{lBex2}}" y="{{lBey2 + 10}}" class="small">IB</text>
