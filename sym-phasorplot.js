@@ -25,7 +25,7 @@
             if(data) {
                 handleInput(data.Label,data.Value,state);
                 draw(state,scope);
-                console.log(scope.showIA);
+                console.log(data);
             }
         }
         function draw(state,scope){
@@ -75,7 +75,7 @@
         visObjectType: phasorplot,
         getDefaultConfig: function() {
             return {
-                DataShape: "Value",
+                DataShape: "Gauge",
                 Frame_Height: 150,
                 Frame_Width: 150
             };
