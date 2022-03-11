@@ -20,6 +20,7 @@
             showIC: false,
         }
         this.onDataUpdate = dataUpdate;
+        this.onResize = resize;
 
         function dataUpdate(data) {
             if(data) {
@@ -71,6 +72,11 @@
             else if(LabelSplit[1] == "ICangle"){
                 scope.ICang = Value;
                 state.showIC = true;
+            }
+        }
+        function resize(width, height) {
+            if (chart) {
+                chart.setSize(width, height);
             }
         }
     };
