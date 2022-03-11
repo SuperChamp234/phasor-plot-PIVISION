@@ -88,8 +88,8 @@
         getDefaultConfig: function() {
             return {
                 DataShape: "Table",
-                Frame_Height: 150,
-                Frame_Width: 150
+                Height: 150,
+                Width: 150
             };
         },
         configTitle: 'Format Symbol',
