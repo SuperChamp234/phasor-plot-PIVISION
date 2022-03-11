@@ -11,5 +11,20 @@
     <!-- Vector C -->
     <line ng-show="{{showIC}}" x1="{{cx}}" y1="{{cy}}" x2="{{lCex2}}" y2="{{lCey2}}" stroke="green" stroke-width="3" />
     <text ng-show="{{showIC}}" x="{{lCex2}}" y="{{lCey2 + 10}}" class="small">IC</text>
-    <!-- Table to show  -->
 </svg>
+<table class="table">
+    <tr>
+        <td>IA</td>
+        <td>{{IAmag}}</td>
+        <td>{{IAang}}</td>
+    </tr>
+    <tr>
+        <td>IB</td>
+        <td>{{IBmag}}</td>
+        <td>{{IBang}}</td>
+    </tr>
+    <tr>
+        <td>IC</td>
+        <td>{{ICmag}}</td>
+        <td>{{ICang}}</td>
+</tr>
