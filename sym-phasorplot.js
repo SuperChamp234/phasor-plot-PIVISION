@@ -23,7 +23,6 @@
 
         function dataUpdate(data) {
             if(data) {
-                scope = state;
                 handleInput(data.Label,data.Value,state);
                 console.log(scope.showIA);
                 draw(state);
