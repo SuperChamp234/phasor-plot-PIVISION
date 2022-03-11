@@ -19,6 +19,7 @@
             showIB: false,
             showIC: false,
         }
+        var chart;
         this.onDataUpdate = dataUpdate;
         this.onResize = resize;
 
