@@ -30,6 +30,7 @@
             }
         }
         function draw(state,scope){
+            chart.setSize(state.h, state.w);
             scope.h = state.h;
             scope.w = state.w;
             scope.cx = state.cx;
