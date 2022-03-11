@@ -25,7 +25,7 @@
             if(data) {
                 handleTable(data.Rows,state);
                 draw(state,scope);
-                console.log(data);
+                console.log(data.Rows);
             }
         }
         function draw(state,scope){
