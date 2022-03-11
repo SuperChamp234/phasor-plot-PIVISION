@@ -75,7 +75,7 @@
         visObjectType: phasorplot,
         getDefaultConfig: function() {
             return {
-                DataShape: "Gauge",
+                DataShape: "Table",
                 Frame_Height: 150,
                 Frame_Width: 150
             };
