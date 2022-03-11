@@ -23,7 +23,7 @@
 
         function dataUpdate(data) {
             if(data) {
-                handleInput(data.Label,data.Value,state);
+                handleTable(data.Rows,state);
                 draw(state,scope);
                 console.log(data);
             }
@@ -52,6 +52,12 @@
             var x2 = state.cx + vectorMag * Math.cos(vectorAng);
             var y2 = state.cy + vectorMag * Math.sin(vectorAng);
             return [x2,y2];
+        }
+        //loop though an array of objects and find the one with the matching label
+        function handleTable(Arr,state) {
+            for (var i = 0; i < Arr.length; i++) {
+                handleInput(Arr[i].Label, Arr[i].Value, state);
+            }
         }
         function handleInput(Label, Value,state){
             LabelSplit = Label.split("|");
