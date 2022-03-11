@@ -71,7 +71,7 @@
 
     var definition = {
         typeName: 'phasorplot',
-        datasourceBehavior: CS.Extensibility.Enums.DatasourceBehaviors.Single,
+        datasourceBehavior: CS.Extensibility.Enums.DatasourceBehaviors.Multiple,
         visObjectType: phasorplot,
         getDefaultConfig: function() {
             return {
