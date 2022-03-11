@@ -19,7 +19,6 @@
             showIB: false,
             showIC: false,
         }
-        var chart;
         this.onDataUpdate = dataUpdate;
         this.onResize = resize;
 
@@ -31,7 +30,7 @@
             }
         }
         function draw(state,scope){
-            chart.setSize(state.h, state.w);
+            scope.scale = 150;
             scope.h = state.h;
             scope.w = state.w;
             scope.cx = state.cx;
@@ -77,9 +76,8 @@
             }
         }
         function resize(width, height) {
-            if (chart) {
-                chart.setSize(width, height);
-            }
+            scope.scale = Math.min(width / 150, height / 150);
+            draw();
         }
     };
 
