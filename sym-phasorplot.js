@@ -26,7 +26,7 @@
                 scope = state;
                 handleInput(data.Label,data.Value,state);
                 console.log(scope.showIA);
-                //draw(state);
+                draw(state,scope);
             }
         }
         function draw(state,scope){
