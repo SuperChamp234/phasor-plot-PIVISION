@@ -23,14 +23,20 @@
 
         function dataUpdate(data) {
             if(data) {
-                scope = state;
                 handleInput(data.Label,data.Value,state);
-                console.log(scope.showIA);
                 draw(state,scope);
+                console.log(scope.showIA);
             }
         }
         function draw(state,scope){
-
+            scope.h = state.h;
+            scope.w = state.w;
+            scope.cx = state.cx;
+            scope.cy = state.cy;
+            scope.circleR = state.circleR;
+            scope.showIA = state.showIA;
+            scope.showIB = state.showIB;
+            scope.showIC = state.showIC;
             if (state.showIA) {
                 [scope.lAex2, scope.lAey2] = plotLine(state, state.IAmag, parseInt(state.IAang))
             }
