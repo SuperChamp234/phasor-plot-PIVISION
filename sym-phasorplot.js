@@ -23,7 +23,7 @@
 
         function dataUpdate(data) {
             if(data) {
-                console.log(data)
+                console.log(data.Label.split("|"));
                 scope = state;
                 handleInput(data.Label,data.Value,state);
                 draw(state);
