@@ -24,8 +24,8 @@
         function dataUpdate(data) {
             if(data) {
                 scope = state;
-                console.log(scope.cx);
                 handleInput(data.Label,data.Value,state);
+                console.log(scope.showIA);
                 draw(state);
             }
         }
